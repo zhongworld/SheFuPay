@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shefu.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.shefu.entity.User" autoMapping="true">
+        <id column="id" property="id"></id>
+<!--        <result column="userName" property="userName" />-->
+<!--        <result column="passWord" property="passWord" />-->
+<!--        <result column="realName" property="realName" />-->
+    </resultMap>
+
+    <select id="Sel" resultMap="BaseResultMap">
+        select * from user where id = #{id}
+    </select>
+    <select id="SelAll" resultMap="BaseResultMap">
+        select * from user
+    </select>
+</mapper>
